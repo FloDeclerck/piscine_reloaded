@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_abs.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdeclerc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 16:10:27 by fdeclerc          #+#    #+#             */
-/*   Updated: 2016/11/04 16:11:02 by fdeclerc         ###   ########.fr       */
+/*   Created: 2016/11/04 15:19:06 by fdeclerc          #+#    #+#             */
+/*   Updated: 2016/11/04 15:20:15 by fdeclerc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#ifndef FT_ABS_H
 
-void	ft_print_alphabet(void)
-{
-	char c;
+# define FT_ABS_H
 
-	c = 'a';
-	while (c <= 'z')
-		ft_putchar(c++);
-}
+# define ABS(value) (value < 0) ? (value * -1) : value
+
+#endif

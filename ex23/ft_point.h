@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdeclerc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 16:10:27 by fdeclerc          #+#    #+#             */
-/*   Updated: 2016/11/04 16:11:02 by fdeclerc         ###   ########.fr       */
+/*   Created: 2016/11/04 15:22:41 by fdeclerc          #+#    #+#             */
+/*   Updated: 2016/11/04 15:30:40 by fdeclerc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#ifndef FT_POINT_H
 
-void	ft_print_alphabet(void)
+# define FT_POINT_H
+
+typedef struct	s_point
 {
-	char c;
+	int			x;
+	int			y;
+}				t_point;
 
-	c = 'a';
-	while (c <= 'z')
-		ft_putchar(c++);
-}
+#endif

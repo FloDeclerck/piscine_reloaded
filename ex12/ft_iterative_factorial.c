@@ -5,24 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdeclerc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/02 12:05:39 by fdeclerc          #+#    #+#             */
-/*   Updated: 2016/11/02 13:32:07 by fdeclerc         ###   ########.fr       */
+/*   Created: 2016/11/04 16:49:55 by fdeclerc          #+#    #+#             */
+/*   Updated: 2016/11/04 16:51:40 by fdeclerc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_iterative_factorial(int nb)
 {
-	int result;
+	int	result;
 
 	result = 1;
-	if (nb < 0)
-		return (0);
 	if (nb == 0)
-		return (1);
-	while (nb > 0)
+		return (result);
+	if (nb > 0 && nb < 13)
 	{
-		result *= nb;
-		nb--;
+		while (nb > 0)
+		{
+			result = nb * result;
+			nb--;
+		}
+		return (result);
 	}
-	return (result);
+	else
+		return (0);
 }

@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_count_if.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdeclerc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 16:10:27 by fdeclerc          #+#    #+#             */
-/*   Updated: 2016/11/04 16:11:02 by fdeclerc         ###   ########.fr       */
+/*   Created: 2016/11/04 15:49:31 by fdeclerc          #+#    #+#             */
+/*   Updated: 2016/11/04 15:50:57 by fdeclerc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_print_alphabet(void)
+int		ft_count_if(char **tab, int (*f)(char*))
 {
-	char c;
+	int n;
 
-	c = 'a';
-	while (c <= 'z')
-		ft_putchar(c++);
+	n = 0;
+	while (*tab)
+	{
+		if (f(*tab) == 1)
+			n++;
+		tab++;
+	}
+	return (n);
 }

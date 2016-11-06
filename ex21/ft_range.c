@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdeclerc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/04 16:10:27 by fdeclerc          #+#    #+#             */
-/*   Updated: 2016/11/04 16:11:02 by fdeclerc         ###   ########.fr       */
+/*   Created: 2016/11/04 14:59:00 by fdeclerc          #+#    #+#             */
+/*   Updated: 2016/11/04 15:16:05 by fdeclerc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <stdlib.h>
 
-void	ft_print_alphabet(void)
+int		*ft_range(int min, int max)
 {
-	char c;
+	int i;
+	int *tab;
 
-	c = 'a';
-	while (c <= 'z')
-		ft_putchar(c++);
+	i = 0;
+	if (min >= max)
+		return (void*)(0);
+	tab = (int*)malloc(sizeof(int) * (max - min));
+	while (min < max)
+		tab[i++] = min++;
+	return (tab);
 }
